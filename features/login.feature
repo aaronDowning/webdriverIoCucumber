@@ -1,12 +1,14 @@
-Feature: The Internet Guinea Pig Website
+Feature: Test Login Functionality
 
-  Scenario Outline: As a user, I can log into the secure area
+  Scenario Outline: check login with valid credentials
+    Given user is on the login page
+    When user enters <username> and password
+    And clicks on login button
+    Then user sees the Products title
 
-    Given I am on the login page
-    When I login with <username> and <password>
-    Then I should see a flash message saying <message>
+Examples:
 
-    Examples:
-      | username | password             | message                        |
-      | tomsmith | SuperSecretPassword! | You logged into a secure area! |
-      | foobar   | barfoo               | Your username is invalid!      |
+| username | 
+| standard_user |
+| problem_user |
+| performance_glitch_user |

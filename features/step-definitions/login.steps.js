@@ -1,4 +1,5 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
+const LoginPage = require('../pageobjects/login.page.js');
 
 Given(/^user is on the login page$/, async () => {
     await browser.url('https://www.saucedemo.com/')
