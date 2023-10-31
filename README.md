@@ -60,5 +60,3 @@ npx wdio
 npx wdio --spec ./features/login.demo.feature
 ```
 ```
-
-You can create a `README.md` file in the root directory of your project and copy-paste the content above into it. This will provide a clear and concise guide for anyone who wants to set up or run tests using your WebdriverIO Cucumber project.
