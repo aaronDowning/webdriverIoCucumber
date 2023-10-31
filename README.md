@@ -57,6 +57,6 @@ npx wdio
 ### Run Specific Tests:
 
 ```bash
-npx wdio --spec ./features/login.demo.feature
+npx wdio --spec ./features/login.feature
 ```
-```
+
