@@ -1,4 +1,4 @@
-```markdown
+
 # WebdriverIO Cucumber Project
 
 This is a WebdriverIO / Cucumber project that utilizes the page object model in a CI/CD pipeline.
