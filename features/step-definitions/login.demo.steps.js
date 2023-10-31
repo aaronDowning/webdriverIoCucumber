@@ -1,4 +1,4 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
+const { Given, When, Then } = require('@wdio/cucumber-framework');
 
 Given(/^user is on the login page$/, async () => {
     await browser.url('https://www.saucedemo.com/')

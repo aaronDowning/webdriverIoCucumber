@@ -1,7 +1,7 @@
 {
   "name": "webdriveriocucumber",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a WebdriverIO / Cucumber project that utilizes the page object model in a CI/CD pipeline.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +16,13 @@
     "@wdio/local-runner": "^8.20.5",
     "@wdio/spec-reporter": "^8.20.0",
     "wdio-wait-for": "^3.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronDowning/webdriverIoCucumber.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aaronDowning/webdriverIoCucumber/issues"
+  },
+  "homepage": "https://github.com/aaronDowning/webdriverIoCucumber#readme"
 }
