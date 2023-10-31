@@ -1,13 +1,10 @@
-const { $ } = require('@wdio/globals')
+const { $ } = require('@wdio/globals');
 const Page = require('./page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
+
+const productTitle = 'Products';
+
 class LoginPage extends Page {
-    /**
-     * define selectors using getter methods
-     */
     get inputUsername () {
         return $('#user-name');
     }
@@ -20,22 +17,22 @@ class LoginPage extends Page {
         return $('#login-button');
     }
 
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
+    get title () {
+        return $('span.title')
+    }
+
     async login (username, password) {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnSubmit.click();
     }
 
-    /**
-     * overwrite specific options to adapt it to page object
-     */
     open () {
         return super.open('login');
     }
 }
-
-module.exports = new LoginPage();
+//To-Do: Fix this incorrectly exported item later
+module.exports = {
+    LoginPage: new LoginPage(),
+    productTitle: productTitle
+};

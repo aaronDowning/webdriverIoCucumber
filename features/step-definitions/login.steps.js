@@ -1,25 +1,21 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
-const LoginPage = require('../pageobjects/login.page.js');
+const { LoginPage, productTitle }= require('../pageobjects/login.page');
+
 
 Given(/^user is on the login page$/, async () => {
-    await browser.url('https://www.saucedemo.com/')
-});
-
-When(/^user enters username and password$/, async () => {
-    await $('#user-name').setValue('standard_user')
-    await $('#password').setValue('secret_sauce')
+    await LoginPage.open();
 });
 
 When(/^user enters (.*) and password$/, async (username) => {
-    await $('#user-name').setValue(username)
-    await $('#password').setValue('secret_sauce')
+    await LoginPage.inputUsername.setValue(username)
+    await LoginPage.inputPassword.setValue('secret_sauce')
 });
-
 
 When(/^clicks on login button$/, async () => {
-    await $('#login-button').click()
+    await LoginPage.btnSubmit.click();
 });
 
+//To-Do: Fix this incorrectly exported productTitle object later
 Then(/^user sees the Products title$/, async () => {
-    await expect($('span.title')).toHaveTextContaining('Products');
+    await expect(LoginPage.title).toHaveTextContaining(productTitle);
 });
